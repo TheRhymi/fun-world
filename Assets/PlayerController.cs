@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 5f;
     public float maxSpeed = 0.5f;
     bool isOnground = false;
+    public Animator animator;
     // Create a reference to the RigidBody2D so we can manipulate it
     Rigidbody2D playerObject;
 
@@ -57,6 +58,9 @@ public class PlayerController : MonoBehaviour
         if ((isOnground == true) && (Input.GetAxis("Jump") > 0.0f))
         {
             playerObject.AddForce(Vector2.up * jumpForce);
+            animator.SetBool("isJumping", true);
+            
         }
+        if ((isOnground == true))
     }
 }

@@ -58,9 +58,6 @@ public class PlayerController : MonoBehaviour
         if ((isOnground == true) && (Input.GetAxis("Jump") > 0.0f))
         {
             playerObject.AddForce(Vector2.up * jumpForce);
-            animator.SetBool("isJumping", true);
-            
         }
-        if ((isOnground == true))
-    }
-}
+
+    }    }    
